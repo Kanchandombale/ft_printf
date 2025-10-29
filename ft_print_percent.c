@@ -1,30 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_print_percent.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdombale <kdombale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/24 11:54:22 by kdombale          #+#    #+#             */
-/*   Updated: 2025/10/29 12:09:15 by kdombale         ###   ########.fr       */
+/*   Created: 2025/10/29 09:53:12 by kdombale          #+#    #+#             */
+/*   Updated: 2025/10/29 13:33:20 by kdombale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdarg.h>
-# include <stddef.h>
-# include <stdint.h>
-# include <unistd.h>
-
-int	ft_printf(const char *format, ...);
-int	ft_print_char(int c);
-int	ft_print_str(const char *s);
-int	ft_print_percent(void);
-int	ft_print_signed(int n);
-int	ft_print_unsigned(unsigned int n);
-int	ft_print_hex(unsigned int n, int uppercase);
-int	ft_print_ptr(void *p);
-
-#endif
+int	ft_print_percent(void)
+{
+	write(1, "%", 1);
+	return (1);
+}

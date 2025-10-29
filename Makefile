@@ -1,35 +1,35 @@
 NAME = libftprintf.a
 
-PART1 = 
-
-SRC = ${PART1}
+SRC = ft_printf.c ft_print_char.c ft_print_str.c ft_print_ptr.c ft_print_signed.c ft_print_unsigned.c ft_print_hex.c ft_print_percent.c
 
 OBJS = ${SRC:.c=.o}
 
-CC = gcc
+CC = cc
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror
 INCLUDE = -I .
-
-libft:
-		make -C ./libft
+MAKE = make -C
+LIBFT_PATH = libft
+LIBFT = ${LIBFT_PATH}/libft.a
 
 .o:.c
 		${CC} ${CFLAGS} ${INCLUDE} -c $< -o ${<:.c=.o}
 
-$(NAME): libft ${OBJS}
+$(NAME): ${OBJS}
+		${MAKE} ${LIBFT_PATH} all
+		cp ${LIBFT} ${NAME}
 		ar rcs ${NAME} ${OBJS}
 
 all: ${NAME}
 
-bonus: ${OBJS} 
-		ar rcs ${NAME} ${OBJS}
-
 clean:
-		${RM} ${OBJS} ${BONUS_OBJS}
+		${MAKE} ${LIBFT_PATH} clean
+		${RM} ${OBJS}
 
 fclean: clean
+		${MAKE} ${LIBFT_PATH} fclean
 		${RM} ${NAME}
+
 
 re: fclean all
 

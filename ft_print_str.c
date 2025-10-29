@@ -1,27 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_percent_s.c                                     :+:      :+:    :+:   */
+/*   ft_print_str.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdombale <kdombale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/24 11:43:17 by kdombale          #+#    #+#             */
-/*   Updated: 2025/10/24 12:02:02 by kdombale         ###   ########.fr       */
+/*   Created: 2025/10/29 09:48:25 by kdombale          #+#    #+#             */
+/*   Updated: 2025/10/29 13:29:42 by kdombale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../libft/libft.h"
 #include "ft_printf.h"
-#include <stdarg.h>
 
-int	ft_percent_s(const char *str, va_start)
+int	ft_print_str(const char *s)
 {
+	int	i;
+
+	i = 0;
+	if (!s)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
+	while (s[i] != '\0')
+	{
+		write(1, &s[i], 1);
+		i++;
+	}
+	return (ft_strlen(s));
 }
 
-int	main(void)
-{
-	const char *s;
-	const char *arg;
+// #include <stdio.h>
 
-	s = "My name is %s.";
-	ft_percent_s(s, arg)
-}
+// int	main(void)
+// {
+// 	int	result;
+
+// 	result = ft_print_str("Kanchan");
+// 	printf("%d", result);
+// }
