@@ -6,13 +6,14 @@
 /*   By: kdombale <kdombale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 11:54:22 by kdombale          #+#    #+#             */
-/*   Updated: 2025/10/29 12:09:15 by kdombale         ###   ########.fr       */
+/*   Updated: 2025/10/30 09:13:58 by kdombale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
+# include "libft/libft.h"
 # include <stdarg.h>
 # include <stddef.h>
 # include <stdint.h>

@@ -6,11 +6,10 @@
 /*   By: kdombale <kdombale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 09:48:25 by kdombale          #+#    #+#             */
-/*   Updated: 2025/10/29 13:29:42 by kdombale         ###   ########.fr       */
+/*   Updated: 2025/10/30 09:06:58 by kdombale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/libft.h"
 #include "ft_printf.h"
 
 int	ft_print_str(const char *s)
